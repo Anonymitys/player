@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertexPlayer - Modern Android Media Player</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23FEFEFE'/%3E%3Cg transform='translate(256,256) scale(0.70) translate(-256,-256)'%3E%3Cpath d='M179,87.63C179.77,87.59 180.55,87.55 181.35,87.51C193.15,87.34 203.78,93.65 213.94,99.06C215.02,99.63 216.1,100.2 217.22,100.79C224.92,104.86 232.57,109.01 240.21,113.2C248.35,117.67 256.54,122.03 264.75,126.38C303.84,147.1 303.84,147.1 314.63,153.38C319.18,156.01 323.78,158.43 328.5,160.75C334.71,163.8 340.81,167.04 346.88,170.38C356.53,175.69 366.25,180.86 376,186C388.24,192.46 400.45,198.98 412.58,205.67C415.05,207.03 417.53,208.35 420.02,209.67C432.18,216.17 441.71,222.25 448,235C448.41,235.81 448.83,236.62 449.25,237.45C453.71,247.58 453.86,261.36 450.04,271.77C442.45,288 431.66,295.25 416.19,303.44C414.46,304.36 412.73,305.28 411.01,306.2C409.21,307.16 407.41,308.12 405.61,309.08C400.93,311.57 396.27,314.07 391.6,316.57C388.09,318.46 384.58,320.34 381.07,322.21C374.05,325.98 367.02,329.74 360,333.5C357.67,334.75 355.33,336 353,337.25C351.85,337.87 350.69,338.49 349.5,339.13C346,341 342.5,342.88 339,344.75C337.84,345.37 336.69,345.99 335.5,346.63C333.17,347.87 330.84,349.12 328.51,350.37C323.21,353.21 317.92,356.04 312.62,358.89C309.64,360.49 306.67,362.09 303.69,363.69C303.1,364 302.52,364.31 301.92,364.64C293.08,369.38 284.2,374.04 275.3,378.66C267.94,382.48 260.67,386.44 253.41,390.43C245.45,394.79 237.41,398.97 229.35,403.12C224.16,405.8 219.01,408.53 213.91,411.38C212.94,411.93 211.96,412.47 210.96,413.03C209.14,414.06 207.32,415.09 205.52,416.13C193.6,422.82 180.38,425.38 166.96,422.12C153.63,418.33 143.82,410.07 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.36 134.5,391.73 134.25,391.08C132,385.07 131.57,379.74 131.62,373.37C131.61,372.33 131.61,371.3 131.6,370.23C131.59,366.78 131.6,363.33 131.61,359.88C131.61,357.4 131.6,354.92 131.6,352.44C131.58,346.41 131.59,340.38 131.59,334.35C131.6,329.45 131.6,324.54 131.6,319.64C131.6,318.94 131.6,318.24 131.6,317.52C131.6,316.1 131.6,314.67 131.59,313.25C131.59,299.93 131.6,286.61 131.61,273.29C131.63,261.89 131.62,250.49 131.61,239.08C131.59,225.82 131.59,212.55 131.6,199.29C131.6,197.87 131.6,196.45 131.6,195.03C131.6,194.33 131.6,193.64 131.6,192.92C131.6,188.03 131.6,183.14 131.59,178.24C131.58,171.64 131.59,165.04 131.61,158.44C131.61,156.03 131.61,153.62 131.6,151.2C131.56,132.58 131.6,117.04 144.38,102.25C155.4,92.8 164.35,87.88 179,87.63Z' fill='%23E4108A'/%3E%3Cpath d='M222,240C223.19,240.58 224.37,241.15 225.6,241.75C250.78,254.29 269.45,275.13 279.32,301.52C286.02,322.37 286.49,345.07 280,366C279.72,367.73 279.72,367.73 279.43,369.5C278.33,374.4 276.96,377.62 272.75,380.59C266.95,384.03 260.88,386.87 254.77,389.69C251.24,391.36 247.92,393.25 244.56,395.25C239.37,398.27 234.07,401.01 228.67,403.64C224.39,405.74 220.2,407.97 216.04,410.29C214.99,410.87 213.94,411.45 212.86,412.05C210.8,413.2 208.74,414.35 206.69,415.52C193.57,422.8 179.65,425.73 164.99,421.56C152.59,417.54 143.41,409.36 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.41 134.5,391.82 134.25,391.21C131.46,384.12 131.6,377.19 131.66,369.67C131.66,368.24 131.66,366.81 131.66,365.38C131.66,361.52 131.67,357.66 131.7,353.81C131.71,349.77 131.72,345.73 131.72,341.69C131.73,334.05 131.75,326.41 131.78,318.77C131.82,310.07 131.83,301.37 131.85,292.67C131.88,274.78 131.93,256.89 132,239C134.08,238.19 136.16,237.38 138.25,236.57C139.99,235.9 139.99,235.9 141.76,235.21C165.86,226.23 199.15,228.37 222,240Z' fill='%23F83675'/%3E%3Cpath d='M314,155C319.67,155.33 323.73,157.83 328.5,160.63C330.11,161.54 331.72,162.46 333.33,163.38C334.52,164.05 334.52,164.05 335.73,164.74C338.86,166.48 342.04,168.05 345.25,169.63C350.54,172.22 355.66,175.05 360.75,178.02C364.76,180.34 368.84,182.46 373,184.5C377.77,186.84 382.41,189.33 387,192C391.43,194.58 395.9,196.99 400.5,199.25C406.84,202.38 413.09,205.65 419.31,209C420.23,209.49 421.15,209.97 422.1,210.47C436.06,218.04 445.28,226.99 451,242C454.15,253 452.86,266.5 447.68,276.57C439.91,290.2 429.97,296.33 416,303C416,302.34 416,301.68 416,301C415.39,301.05 414.78,301.09 414.16,301.14C389.59,302.15 368.37,288.29 350.55,272.88C327.33,250.93 312.3,218.22 310.83,186.35C310.78,176.14 311.44,166.1 313,156C313.33,155.67 313.66,155.34 314,155Z' fill='%23DA0A4B'/%3E%3C/g%3E%3C/svg%3E">
+    <style>
+        :root {
+            --pink-primary: #E4108A;
+            --pink-bright: #F83675;
+            --red-deep: #DA0A4B;
+            --bg-dark: #0a0a0f;
+            --bg-card: #13131a;
+            --bg-card-hover: #1a1a24;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9090a0;
+            --border-color: #2a2a35;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(10, 10, 15, 0.7);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .nav-logo svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-logo span {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #000;
+            color: white;
+            padding: 6px 16px 6px 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #a6a6a6;
+            transition: background 0.2s, transform 0.2s;
+            line-height: 1.2;
+        }
+
+        .nav-cta:hover {
+            background: #1a1a1a;
+            transform: translateY(-1px);
+        }
+
+        .nav-cta .gp-text-small {
+            font-size: 9px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .nav-cta .gp-text-large {
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+            position: relative;
+        }
+
+        /* Gradient orbs */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(228, 16, 138, 0.15) 0%, transparent 70%);
+            top: 10%;
+            left: 15%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(218, 10, 75, 0.1) 0%, transparent 70%);
+            bottom: 10%;
+            right: 10%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(228, 16, 138, 0.1);
+            border: 1px solid rgba(228, 16, 138, 0.25);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--pink-bright);
+            margin-bottom: 32px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--pink-bright);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--pink-primary), var(--pink-bright), var(--red-deep));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000;
+            color: white;
+            padding: 10px 24px 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.25s;
+            border: 1.5px solid #a6a6a6;
+            cursor: pointer;
+            line-height: 1.2;
+        }
+
+        .btn-primary:hover {
+            background: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            border-color: #ccc;
+        }
+
+        .btn-primary .gp-icon {
+            flex-shrink: 0;
+        }
+
+        .btn-primary .gp-text-small {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .btn-primary .gp-text-large {
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--text-primary);
+            padding: 16px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all 0.25s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card);
+            border-color: var(--text-secondary);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FEATURES ===== */
+        .section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--pink-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 17px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(228, 16, 138, 0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(228, 16, 138, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(228, 16, 138, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--pink-bright);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            counter-reset: step;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .step-card:hover {
+            border-color: rgba(228, 16, 138, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: rgba(228, 16, 138, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--pink-bright);
+        }
+
+        .step-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ===== STATS ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin: 0 40px;
+            max-width: 1120px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, var(--pink-primary), var(--pink-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* ===== i18n HIGHLIGHT ===== */
+        .i18n-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .i18n-text h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .i18n-text p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .i18n-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .i18n-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .i18n-flag {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .i18n-card-content .lang-label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .i18n-card-content .lang-sample {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 60px 40px 40px;
+            border-top: 1px solid var(--border-color);
+            max-width: 1200px;
+            margin: 80px auto 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .footer-logo span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 14px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .i18n-section {
+                grid-template-columns: 1fr;
+                padding: 36px;
+                gap: 36px;
+            }
+
+            .stats-row {
+                margin: 0 20px;
+                padding: 48px 0;
+            }
+
+            .stat-value {
+                font-size: 36px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <svg viewBox="0 0 512 512" fill="none">
+                <path d="M179,87.63C179.77,87.59 180.55,87.55 181.35,87.51C193.15,87.34 203.78,93.65 213.94,99.06C215.02,99.63 216.1,100.2 217.22,100.79C224.92,104.86 232.57,109.01 240.21,113.2C248.35,117.67 256.54,122.03 264.75,126.38C303.84,147.1 303.84,147.1 314.63,153.38C319.18,156.01 323.78,158.43 328.5,160.75C334.71,163.8 340.81,167.04 346.88,170.38C356.53,175.69 366.25,180.86 376,186C388.24,192.46 400.45,198.98 412.58,205.67C415.05,207.03 417.53,208.35 420.02,209.67C432.18,216.17 441.71,222.25 448,235C448.41,235.81 448.83,236.62 449.25,237.45C453.71,247.58 453.86,261.36 450.04,271.77C442.45,288 431.66,295.25 416.19,303.44C414.46,304.36 412.73,305.28 411.01,306.2C409.21,307.16 407.41,308.12 405.61,309.08C400.93,311.57 396.27,314.07 391.6,316.57C388.09,318.46 384.58,320.34 381.07,322.21C374.05,325.98 367.02,329.74 360,333.5C357.67,334.75 355.33,336 353,337.25C351.85,337.87 350.69,338.49 349.5,339.13C346,341 342.5,342.88 339,344.75C337.84,345.37 336.69,345.99 335.5,346.63C333.17,347.87 330.84,349.12 328.51,350.37C323.21,353.21 317.92,356.04 312.62,358.89C309.64,360.49 306.67,362.09 303.69,363.69C303.1,364 302.52,364.31 301.92,364.64C293.08,369.38 284.2,374.04 275.3,378.66C267.94,382.48 260.67,386.44 253.41,390.43C245.45,394.79 237.41,398.97 229.35,403.12C224.16,405.8 219.01,408.53 213.91,411.38C212.94,411.93 211.96,412.47 210.96,413.03C209.14,414.06 207.32,415.09 205.52,416.13C193.6,422.82 180.38,425.38 166.96,422.12C153.63,418.33 143.82,410.07 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.36 134.5,391.73 134.25,391.08C132,385.07 131.57,379.74 131.62,373.37C131.61,372.33 131.61,371.3 131.6,370.23C131.59,366.78 131.6,363.33 131.61,359.88C131.61,357.4 131.6,354.92 131.6,352.44C131.58,346.41 131.59,340.38 131.59,334.35C131.6,329.45 131.6,324.54 131.6,319.64C131.6,318.94 131.6,318.24 131.6,317.52C131.6,316.1 131.6,314.67 131.59,313.25C131.59,299.93 131.6,286.61 131.61,273.29C131.63,261.89 131.62,250.49 131.61,239.08C131.59,225.82 131.59,212.55 131.6,199.29C131.6,197.87 131.6,196.45 131.6,195.03C131.6,194.33 131.6,193.64 131.6,192.92C131.6,188.03 131.6,183.14 131.59,178.24C131.58,171.64 131.59,165.04 131.61,158.44C131.61,156.03 131.61,153.62 131.6,151.2C131.56,132.58 131.6,117.04 144.38,102.25C155.4,92.8 164.35,87.88 179,87.63Z" fill="#E4108A"/>
+                <path d="M222,240C223.19,240.58 224.37,241.15 225.6,241.75C250.78,254.29 269.45,275.13 279.32,301.52C286.02,322.37 286.49,345.07 280,366C279.72,367.73 279.72,367.73 279.43,369.5C278.33,374.4 276.96,377.62 272.75,380.59C266.95,384.03 260.88,386.87 254.77,389.69C251.24,391.36 247.92,393.25 244.56,395.25C239.37,398.27 234.07,401.01 228.67,403.64C224.39,405.74 220.2,407.97 216.04,410.29C214.99,410.87 213.94,411.45 212.86,412.05C210.8,413.2 208.74,414.35 206.69,415.52C193.57,422.8 179.65,425.73 164.99,421.56C152.59,417.54 143.41,409.36 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.41 134.5,391.82 134.25,391.21C131.46,384.12 131.6,377.19 131.66,369.67C131.66,368.24 131.66,366.81 131.66,365.38C131.66,361.52 131.67,357.66 131.7,353.81C131.71,349.77 131.72,345.73 131.72,341.69C131.73,334.05 131.75,326.41 131.78,318.77C131.82,310.07 131.83,301.37 131.85,292.67C131.88,274.78 131.93,256.89 132,239C134.08,238.19 136.16,237.38 138.25,236.57C139.99,235.9 139.99,235.9 141.76,235.21C165.86,226.23 199.15,228.37 222,240Z" fill="#F83675"/>
+                <path d="M314,155C319.67,155.33 323.73,157.83 328.5,160.63C330.11,161.54 331.72,162.46 333.33,163.38C334.52,164.05 334.52,164.05 335.73,164.74C338.86,166.48 342.04,168.05 345.25,169.63C350.54,172.22 355.66,175.05 360.75,178.02C364.76,180.34 368.84,182.46 373,184.5C377.77,186.84 382.41,189.33 387,192C391.43,194.58 395.9,196.99 400.5,199.25C406.84,202.38 413.09,205.65 419.31,209C420.23,209.49 421.15,209.97 422.1,210.47C436.06,218.04 445.28,226.99 451,242C454.15,253 452.86,266.5 447.68,276.57C439.91,290.2 429.97,296.33 416,303C416,302.34 416,301.68 416,301C415.39,301.05 414.78,301.09 414.16,301.14C389.59,302.15 368.37,288.29 350.55,272.88C327.33,250.93 312.3,218.22 310.83,186.35C310.78,176.14 311.44,166.1 313,156C313.33,155.67 313.66,155.34 314,155Z" fill="#DA0A4B"/>
+            </svg>
+            <span>VertexPlayer</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#download">Download</a></li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.ekko.vertex.player" target="_blank" class="nav-cta">
+            <svg width="20" height="22" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="white"/></svg>
+            <div><span class="gp-text-small">Get it on</span><span class="gp-text-large">Google Play</span></div>
+        </a>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Play Everything.<br><span class="gradient-text">Beautifully.</span></h1>
+            <p>A modern media player for Android. Play local videos, music, and online streams &mdash; all in one elegant, easy-to-use app.</p>
+            <div class="hero-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.ekko.vertex.player" target="_blank" class="btn-primary">
+                    <svg class="gp-icon" width="24" height="26" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="white"/></svg>
+                    <div><span class="gp-text-small">Get it on</span><span class="gp-text-large">Google Play</span></div>
+                </a>
+                <a href="#features" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <div class="stats-row">
+        <div class="stat">
+            <div class="stat-value">All</div>
+            <div class="stat-label">Video &amp; Audio Formats</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">Free</div>
+            <div class="stat-label">No Ads, No In-App Purchases</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Languages Supported</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">8.1+</div>
+            <div class="stat-label">Android Compatibility</div>
+        </div>
+    </div>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section" id="features">
+        <div class="section-header">
+            <div class="section-label">Features</div>
+            <h2>Everything You Need</h2>
+            <p>A full-featured media player with a clean, modern interface designed for simplicity.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                </div>
+                <h3>Video Player</h3>
+                <p>Play any video on your phone with gesture controls, picture-in-picture, adjustable playback speed, and easy album browsing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <h3>Audio Player</h3>
+                <p>Listen to your music with a sleek mini player, shuffle and repeat options, artist browsing, and keep playing even when you switch apps.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Online Streaming</h3>
+                <p>Paste a link to play audio or video from the internet. The app automatically detects the media type and saves your history for quick access.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+                <h3>Personalize Your Experience</h3>
+                <p>Dark mode, language switching, skip interval, playback speed, private mode, and interface options &mdash; tailor the app to your liking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3>Beautiful Design</h3>
+                <p>Clean, modern interface with smooth animations, adaptive colors, and responsive layouts that look great on phones and tablets alike.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Multi-Language</h3>
+                <p>Available in English and Simplified Chinese. The app follows your system language automatically, or you can switch manually in settings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== i18n ===== -->
+    <section class="section">
+        <div class="i18n-section">
+            <div class="i18n-text">
+                <h3>Speak Your Language</h3>
+                <p>VertexPlayer is fully translated into English and Simplified Chinese. The app follows your phone's language setting, or you can switch anytime from the settings page.</p>
+            </div>
+            <div class="i18n-demo">
+                <div class="i18n-card">
+                    <div class="i18n-flag">🇺🇸</div>
+                    <div class="i18n-card-content">
+                        <div class="lang-label">English</div>
+                        <div class="lang-sample">Play Everything. Beautifully.</div>
+                    </div>
+                </div>
+                <div class="i18n-card">
+                    <div class="i18n-flag">🇨🇳</div>
+                    <div class="i18n-card-content">
+                        <div class="lang-label">简体中文</div>
+                        <div class="lang-sample">视频 &middot; 音频 &middot; 在线播放 &middot; 设置</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section" id="how-it-works">
+        <div class="section-header">
+            <div class="section-label">How It Works</div>
+            <h2>Simple as 1-2-3</h2>
+            <p>Get started in seconds. No accounts, no sign-ups, no hassle.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Install the App</h3>
+                <p>Download VertexPlayer from Google Play and install it on your Android device. Quick and easy.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Browse Your Media</h3>
+                <p>The app automatically finds all videos and music on your phone, organized by albums and artists.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Play &amp; Enjoy</h3>
+                <p>Tap to play. Use gestures to control volume and brightness, or paste a link to stream from the web.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DOWNLOAD ===== -->
+    <section class="section" id="download">
+        <div class="section-header">
+            <div class="section-label">Download</div>
+            <h2>Try VertexPlayer</h2>
+            <p>Compatible with Android 8.1 and above. Free, no ads.</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=com.ekko.vertex.player" target="_blank" class="btn-primary">
+                <svg class="gp-icon" width="24" height="26" viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="white"/></svg>
+                <div><span class="gp-text-small">Get it on</span><span class="gp-text-large">Google Play</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg viewBox="0 0 512 512" width="28" height="28">
+                    <path d="M179,87.63C179.77,87.59 180.55,87.55 181.35,87.51C193.15,87.34 203.78,93.65 213.94,99.06C215.02,99.63 216.1,100.2 217.22,100.79C224.92,104.86 232.57,109.01 240.21,113.2C248.35,117.67 256.54,122.03 264.75,126.38C303.84,147.1 303.84,147.1 314.63,153.38C319.18,156.01 323.78,158.43 328.5,160.75C334.71,163.8 340.81,167.04 346.88,170.38C356.53,175.69 366.25,180.86 376,186C388.24,192.46 400.45,198.98 412.58,205.67C415.05,207.03 417.53,208.35 420.02,209.67C432.18,216.17 441.71,222.25 448,235C448.41,235.81 448.83,236.62 449.25,237.45C453.71,247.58 453.86,261.36 450.04,271.77C442.45,288 431.66,295.25 416.19,303.44C414.46,304.36 412.73,305.28 411.01,306.2C409.21,307.16 407.41,308.12 405.61,309.08C400.93,311.57 396.27,314.07 391.6,316.57C388.09,318.46 384.58,320.34 381.07,322.21C374.05,325.98 367.02,329.74 360,333.5C357.67,334.75 355.33,336 353,337.25C351.85,337.87 350.69,338.49 349.5,339.13C346,341 342.5,342.88 339,344.75C337.84,345.37 336.69,345.99 335.5,346.63C333.17,347.87 330.84,349.12 328.51,350.37C323.21,353.21 317.92,356.04 312.62,358.89C309.64,360.49 306.67,362.09 303.69,363.69C303.1,364 302.52,364.31 301.92,364.64C293.08,369.38 284.2,374.04 275.3,378.66C267.94,382.48 260.67,386.44 253.41,390.43C245.45,394.79 237.41,398.97 229.35,403.12C224.16,405.8 219.01,408.53 213.91,411.38C212.94,411.93 211.96,412.47 210.96,413.03C209.14,414.06 207.32,415.09 205.52,416.13C193.6,422.82 180.38,425.38 166.96,422.12C153.63,418.33 143.82,410.07 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.36 134.5,391.73 134.25,391.08C132,385.07 131.57,379.74 131.62,373.37C131.61,372.33 131.61,371.3 131.6,370.23C131.59,366.78 131.6,363.33 131.61,359.88C131.61,357.4 131.6,354.92 131.6,352.44C131.58,346.41 131.59,340.38 131.59,334.35C131.6,329.45 131.6,324.54 131.6,319.64C131.6,318.94 131.6,318.24 131.6,317.52C131.6,316.1 131.6,314.67 131.59,313.25C131.59,299.93 131.6,286.61 131.61,273.29C131.63,261.89 131.62,250.49 131.61,239.08C131.59,225.82 131.59,212.55 131.6,199.29C131.6,197.87 131.6,196.45 131.6,195.03C131.6,194.33 131.6,193.64 131.6,192.92C131.6,188.03 131.6,183.14 131.59,178.24C131.58,171.64 131.59,165.04 131.61,158.44C131.61,156.03 131.61,153.62 131.6,151.2C131.56,132.58 131.6,117.04 144.38,102.25C155.4,92.8 164.35,87.88 179,87.63Z" fill="#E4108A"/>
+                    <path d="M222,240C223.19,240.58 224.37,241.15 225.6,241.75C250.78,254.29 269.45,275.13 279.32,301.52C286.02,322.37 286.49,345.07 280,366C279.72,367.73 279.72,367.73 279.43,369.5C278.33,374.4 276.96,377.62 272.75,380.59C266.95,384.03 260.88,386.87 254.77,389.69C251.24,391.36 247.92,393.25 244.56,395.25C239.37,398.27 234.07,401.01 228.67,403.64C224.39,405.74 220.2,407.97 216.04,410.29C214.99,410.87 213.94,411.45 212.86,412.05C210.8,413.2 208.74,414.35 206.69,415.52C193.57,422.8 179.65,425.73 164.99,421.56C152.59,417.54 143.41,409.36 136.88,398.05C136.13,396.38 136.13,396.38 135,393C134.75,392.41 134.5,391.82 134.25,391.21C131.46,384.12 131.6,377.19 131.66,369.67C131.66,368.24 131.66,366.81 131.66,365.38C131.66,361.52 131.67,357.66 131.7,353.81C131.71,349.77 131.72,345.73 131.72,341.69C131.73,334.05 131.75,326.41 131.78,318.77C131.82,310.07 131.83,301.37 131.85,292.67C131.88,274.78 131.93,256.89 132,239C134.08,238.19 136.16,237.38 138.25,236.57C139.99,235.9 139.99,235.9 141.76,235.21C165.86,226.23 199.15,228.37 222,240Z" fill="#F83675"/>
+                    <path d="M314,155C319.67,155.33 323.73,157.83 328.5,160.63C330.11,161.54 331.72,162.46 333.33,163.38C334.52,164.05 334.52,164.05 335.73,164.74C338.86,166.48 342.04,168.05 345.25,169.63C350.54,172.22 355.66,175.05 360.75,178.02C364.76,180.34 368.84,182.46 373,184.5C377.77,186.84 382.41,189.33 387,192C391.43,194.58 395.9,196.99 400.5,199.25C406.84,202.38 413.09,205.65 419.31,209C420.23,209.49 421.15,209.97 422.1,210.47C436.06,218.04 445.28,226.99 451,242C454.15,253 452.86,266.5 447.68,276.57C439.91,290.2 429.97,296.33 416,303C416,302.34 416,301.68 416,301C415.39,301.05 414.78,301.09 414.16,301.14C389.59,302.15 368.37,288.29 350.55,272.88C327.33,250.93 312.3,218.22 310.83,186.35C310.78,176.14 311.44,166.1 313,156C313.33,155.67 313.66,155.34 314,155Z" fill="#DA0A4B"/>
+                </svg>
+                <span>VertexPlayer</span>
+            </div>
+            <div class="footer-copy">&copy; 2025 VertexPlayer. All rights reserved.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
